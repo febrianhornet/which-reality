@@ -1,4 +1,4 @@
-name: which
+name: Which
 
 on:
   push:
@@ -7,16 +7,15 @@ on:
     branches: [ "i01" ]
 
 jobs:
-  which-reality:
+  which-tests:
 
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Startup web server
-    - name: Copy .env
       run: docker run -v $(pwd):/var/www/html -dit --rm --name php php:apache
     - name: OWASP ZAP Baseline Scan
-      uses: zaproxy/action-baseline@v0.3.0
+      uses: zaproxy/action-baseline@v0.3.069e
       with:
-         target: http://172.17.0.2
+        target: http://172.17.0.2
