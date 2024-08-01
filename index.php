@@ -3,7 +3,7 @@
   <link rel="stylesheet" href="style.css">
   <title>Oh geez... What reality am I in?</title>
 </head>
-
+ 
 <!-- TODO: Remember to upgrade Azure subscription before trial ends. Company credit card is 4123-4567-8910-1112. -->
   
 <body>
